@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 import pickle
 
 city = input("Type in the city:(for United States of America add the two letter state "
@@ -29,8 +31,6 @@ except KeyError:
 city_url = "https://www.wunderground.com/weather/"+code+"/"+city
 # print(city_url)
 
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 
 options = Options()
 options.headless = True
